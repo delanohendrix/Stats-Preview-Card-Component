@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap");
+:root {
+  --main-bg: hsl(233, 47%, 7%);
+  --card-bg: hsl(244, 38%, 16%);
+  --accent: hsl(277, 64%, 61%);
+
+  --mainh-stats: hsl(0, 0%, 100%);
+  --main-paragraph: hsla(0, 0%, 100%, 0.75);
+  --stat-headings: hsla(0, 0%, 100%, 0.6);
+}
+body {
+  background-color: var(--main-bg);
+  color: var(--mainh-stats);
+  margin: 0 auto;
+}
+main {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card {
+  margin: 85px auto;
+  max-width: 325px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: var(--card-bg);
+}
+picture {
+  display: flex;
+  background-color: var(--accent);
+}
+img {
+  width: 100%;
+}
+img.overlay {
+  mix-blend-mode: multiply;
+}
+.content {
+  padding: 45px 30px 40px;
+}
+.content__primary {
+  margin: 0px auto 45px;
+}
+.content__primary h1 {
+  color: var(--mainh-stats);
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 28px;
+  margin: 0;
+}
+.content__primary span {
+  color: var(--accent);
+}
+.content__primary p {
+  color: var(--main-paragraph);
+  font-size: 15px;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  margin: 20px 0px;
+}
+.content__accolades {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  row-gap: 35px;
+}
+.content__accolades h2 {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  color: var(--mainh-stats);
+  margin: 0px 0px 12px;
+}
+.content__accolades p {
+  font-family: "Lexend Deca", sans-serif;
+  font-weight: 400;
+  color: var(--stat-headings);
+  margin: 0;
+  text-transform: uppercase;
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media only screen and (min-width: 1440px) {
+  .card {
+    margin: 160px auto;
+    max-width: 1120px;
+    display: flex;
+    flex-direction: row-reverse;
+    text-align: left;
+  }
+  picture {
+    width: 58%;
+  }
+  .content {
+    width: 42%;
+    padding: 60px 120px 60px 75px;
+  }
+  .content__primary {
+    margin: 0px 0px 70px;
+  }
+  .content__primary h1 {
+    font-size: 36px;
+  }
+  .content__primary p {
+    font-size: 15px;
+    width: 350px;
+    line-height: 25px;
+    margin: 30px 0px;
+  }
+  .content__accolades {
+    display: grid;
+    grid-template-rows: none;
+    grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 0;
+  }
+}
